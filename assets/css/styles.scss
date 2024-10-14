@@ -9,7 +9,7 @@ body {
     min-height: 100vh; /* Ensure the container takes the full height of the viewport */
 }
 
-.sidebar {
+.sidebar-wrapper {
     width: 200px;
     background-color: #f4f4f4;
     padding: 15px;
@@ -41,11 +41,15 @@ body {
     color: #4CAF50;
 }
 
-.content {
+.content-wrapper {
     flex-grow: 1;
     padding: 15px;
     background-color: #fff; /* Ensure the content has a different background color */
     box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+}
+
+.content {
+    padding: 15px;
 }
 
 header {
@@ -63,5 +67,6 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
 
 
