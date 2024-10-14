@@ -1,5 +1,5 @@
 title: Test-DevPortal
 description: A simple developer portal
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/Test-DevPortal" # the subpath of your site, e.g. /blog
 url: "https://NiklasUser.github.io" # the base hostname & protocol for your site
 theme: jekyll-theme-primer
