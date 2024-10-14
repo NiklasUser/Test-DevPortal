@@ -1,79 +1,58 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #40E0D0; /* Turquoise color code */
-    -webkit-text-size-adjust: 100%; /* Add support for text-size-adjust */
-    text-size-adjust: 100%; /* Add support for text-size-adjust */
-    -webkit-user-select: none; /* Add support for user-select in Safari */
-    user-select: none; /* Add support for user-select */
-}
-
-.container {
-    display: flex;
-    min-height: 100vh; /* Ensure the container takes the full height of the viewport */
-}
-
+/* The side navigation menu */
 .sidebar {
-    width: 200px;
-    background-color: #FFFF00; /* Yellow color code */
-    padding: 15px;
-    border-right: 1px solid #ccc; /* Add a border to the right side */
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
-    position: fixed; /* Fix the sidebar position */
-    height: 100%; /* Make the sidebar take the full height of the viewport */
-    overflow: auto; /* Add scroll if the content is too long */
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
 }
 
-.sidebar h2 {
-    margin-top: 0;
-    font-size: 1.5em;
-    color: #333;
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
 }
 
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
+/* Active/current link */
+.sidebar a.active {
+  background-color: #04AA6D;
+  color: white;
 }
 
-.sidebar ul li {
-    margin-bottom: 10px;
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
 }
 
-.sidebar ul li a {
-    display: block;
-    text-decoration: none;
-    color: #333;
-    padding: 10px;
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
 }
 
-.sidebar ul li a:hover {
-    background-color: #555;
-    color: white;
-}
-
-.content {
-    margin-left: 220px; /* Ensure the content is next to the sidebar */
-    padding: 15px;
-    background-color: #40E0D0; /* Ensure the content has a different background color */
-    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
-    flex-grow: 1;
-}
-
-header {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 1em;
-}
-
-footer {
-    background-color: #f1f1f1;
-    text-align: center;
-    padding: 1em;
-    position: fixed;
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
     width: 100%;
-    bottom: 0;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
 }
 
 
