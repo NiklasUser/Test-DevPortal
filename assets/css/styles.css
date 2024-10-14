@@ -107,5 +107,8 @@ div.content {
     background-color: #ddd;
 }
 
-
+.sub-link {
+    font-size: 14px; /* Adjust the size as needed */
+    padding-left: 30px; /* Indent to show hierarchy */
+}
 
