@@ -6,6 +6,7 @@ body {
 
 .container {
     display: flex;
+    min-height: 100vh; /* Ensure the container takes the full height of the viewport */
 }
 
 .sidebar {
@@ -13,6 +14,7 @@ body {
     background-color: #f4f4f4;
     padding: 15px;
     border-right: 1px solid #ccc; /* Add a border to the right side */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
 .sidebar h2 {
@@ -43,6 +45,7 @@ body {
     flex-grow: 1;
     padding: 15px;
     background-color: #fff; /* Ensure the content has a different background color */
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
 }
 
 header {
