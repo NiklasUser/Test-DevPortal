@@ -2,7 +2,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: turquoise; /* Set the background color to turquoise */
+    background-color: #40E0D0; /* Turquoise color code */
+    -webkit-text-size-adjust: 100%; /* Add support for text-size-adjust */
+    text-size-adjust: 100%; /* Add support for text-size-adjust */
+    -webkit-user-select: none; /* Add support for user-select in Safari */
+    user-select: none; /* Add support for user-select */
 }
 
 .container {
@@ -12,7 +16,7 @@ body {
 
 .sidebar {
     width: 200px;
-    background-color: #f4f4f4;
+    background-color: #FFFF00; /* Yellow color code */
     padding: 15px;
     border-right: 1px solid #ccc; /* Add a border to the right side */
     box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
