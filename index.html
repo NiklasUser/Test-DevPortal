@@ -63,53 +63,125 @@ div.content {
             right: 10px;
             width: 100px; /* Adjust the width as needed */
         }
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
 </style>
 </head>
 <body>
-<div class="sidebar">
-                <a href="#forum">Forum</a>
-                <a href="#discussion-panel">Discussion Panel</a>
-                <a href="#code-examples">Code Examples</a>
- <a href="#data-model-description" class="accordion">Data Model Description</a>
-    <div class="panel">
-        <a href="#ai-brains" class="sub-link">-AI Brains</a>
-        <a href="#flat-list" class="sub-link">-Flat List</a>
-    </div>
-                <a href="#how-to-guide">How to Guide</a>
-                <a href="#profile">Profile</a>
-                <a href="#learn">Learn</a>
+		<h1><b>COMPANY XY NEW PRODUCT DEVELOPERS PORTAL</b></h1>
+		<img src="logo.png" alt="Logo" class="logo">
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Forum')">Forum</button>
+  <button class="tablinks" onclick="openCity(event, 'Discussion Panel')">Discussion Panel</button>
+  <button class="tablinks" onclick="openCity(event, 'Code Examples')">Code Examples</button>
+  <button class="tablinks" onclick="openCity(event, 'Data Model Description')">Data Model Description</button>
+  <button class="tablinks" onclick="openCity(event, 'How to Guide')">How to Guide</button>
+  <button class="tablinks" onclick="openCity(event, 'Profile')">Profile</button>
+ <button class="tablinks" onclick="openCity(event, 'Learn')">Learn</button>
+</div>
+
+	<div id="Forum" class="tabcontent">
+ 	 <h3>Forum</h3>
+ 	 <p>Forum.</p>
+	</div>
+	<div id="Discussion Panel" class="tabcontent">
+  	<h3>Discussion Panel</h3>
+  	<p>Disucssion Panel.</p>
+	</div>
+	<div id="Code Examples" class="tabcontent">
+  	<h3>Code Examples</h3>
+  	<p>Code Examples.</p>
+	</div>
+	<div id="How to Guide" class="tabcontent">
+ 	 <h3>How to Guide</h3>
+ 	 <p>How to Guide.</p>
+	</div>
+	<div id="Profile" class="tabcontent">
+ 	 <h3>Profile</h3>
+ 	 <p>Profile.</p>
+	</div>
+	<div id="Learn" class="tabcontent">
+ 	 <h3>Learn</h3>
+ 	 <p>Learn.</p>
+	</div>
+<div id="Data Model Description" class="tabcontent">
+  <h3>Data Model Description</h3>
+	<div class="sidebar">
+                <a href="#Object1">Object1</a>
+                <a href="#Object2">Object2</a>
+                <a href="#Object3">Object3</a>
+	 <a href="#Model1" class="accordion">Model1</a>
+    	<div class="panel">
+        	<a href="#Object4" class="sub-link">-Object4</a>
+        	<a href="#Object5" class="sub-link">-Object5</a>
+   	 </div>
+                <a href="Object6">Object6</a>
+                <a href="#Object7">Object7</a>
+                <a href="#Object8">Object8</a>
 </div>
 
 <div class="content">
-<section id="forum">
-		<h1><b>COMPANY XY NEW PRODUCT DEVELOPERS PORTAL</b></h1>
-		<img src="logo.png" alt="Logo" class="logo">
-                <h2>Forum</h2>
-                <p>This is the forum section of the portal.</p>
+<section id="Object1">
+                <h2>Object1</h2>
+                <p>This is the Object1 section of the portal.</p>
             </section>
-            <section id="discussion-panel">
-                <h2>Discussion Panel</h2>
-                <p>This is the discussion panel section of the portal.</p>
+            <section id="Object2">
+                <h2>Object2</h2>
+                <p>This is the Object2 section of the portal.</p>
             </section>
-            <section id="code-examples">
-                <h2>Code Examples</h2>
-                <p>This is the code examples section of the portal.</p>
+            <section id="Object3">
+                <h2>Object3</h2>
+                <p>This is the Object3 section of the portal.</p>
             </section>
-            <section id="data-model-description">
-                <h2>Data Model Description</h2>
-                <p>This is the data model description section of the portal.</p>
+            <section id="Model1">
+                <h2>Model1</h2>
+                <p>This is the Model1 section of the portal.</p>
             </section>
-            <section id="how-to-guide">
-                <h2>How to Guide</h2>
-                <p>This is the how to guide section of the portal.</p>
+            <section id="Object4">
+                <h2>Object4</h2>
+                <p>This is the how to Object4 section of the portal.</p>
             </section>
-            <section id="profile">
-                <h2>Profile</h2>
-                <p>This is the profile section of the portal.</p>
+            <section id="Object5">
+                <h2>Object5</h2>
+                <p>This is the Object5 section of the portal.</p>
             </section>
-            <section id="learn">
-                <h2>Learn</h2>
-                <p>This is the learn section of the portal.</p>
+            <section id="Object6">
+                <h2>Object6</h2>
+                <p>This is the Object6 section of the portal.</p>
             </section>
 </div>
 <script>
@@ -127,6 +199,20 @@ div.content {
             }
         });
     }
+
+	function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
 </script>
 
 </body>
