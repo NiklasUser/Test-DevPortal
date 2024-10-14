@@ -3,3 +3,5 @@ description: A simple developer portal
 baseurl: "/Test-DevPortal" # the subpath of your site, e.g. /blog
 url: "https://NiklasUser.github.io" # the base hostname & protocol for your site
 theme: jekyll-theme-primer
+sass:
+  sass_dir: assets/css
