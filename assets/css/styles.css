@@ -55,7 +55,7 @@ body {
 .content {
     margin-left: 220px; /* Ensure the content is next to the sidebar */
     padding: 15px;
-    background-color: #fff; /* Ensure the content has a different background color */
+    background-color: #40E0D0; /* Ensure the content has a different background color */
     box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
     flex-grow: 1;
 }
@@ -75,5 +75,6 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
 
 
