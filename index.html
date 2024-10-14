@@ -70,7 +70,11 @@ div.content {
                 <a href="#forum">Forum</a>
                 <a href="#discussion-panel">Discussion Panel</a>
                 <a href="#code-examples">Code Examples</a>
-                <a href="#data-model-description">Data Model Description</a>
+    <button class="accordion">Data Model Description</button>
+    <div class="panel">
+        <a href="#ai-brains">AI Brains</a>
+        <a href="#flat-list">Flat List</a>
+    </div>
                 <a href="#how-to-guide">How to Guide</a>
                 <a href="#profile">Profile</a>
                 <a href="#learn">Learn</a>
@@ -108,6 +112,22 @@ div.content {
                 <p>This is the learn section of the portal.</p>
             </section>
 </div>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+</script>
 
 </body>
 </html>
